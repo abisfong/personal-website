@@ -228,12 +228,65 @@ h4, .h4 {
 
 .about-content .about-item {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 25px 30px;
-  text-align: center;
   color: #fff;
+  text-align: center;
+
   margin-bottom: 30px;
+  padding: 25px 30px;
+
+  height: 281px;
+}
+
+.about-content .about-item .row {
+  overflow-y: scroll;
+  padding: 15px;
+  
+  height: calc(100% - 51px);
+}
+
+.about-content .about-item .about-skill {
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 80%;
 
   height: 100%;
+}
+
+.about-skill.c-plus-plus {
+  background-image: url('/img/c-plus-plus.png');
+}
+
+.about-skill.java {
+  background-image: url('/img/java.png');
+}
+
+.about-skill.js {
+  background-image: url('/img/js.png');
+}
+
+.about-skill.html-5 {
+  background-image: url('/img/html-5.png');
+}
+
+.about-skill.css {
+  background-image: url('/img/css.png');
+}
+
+.about-skill.ruby {
+  background-image: url('/img/ruby.png');
+}
+
+.about-skill.react {
+  background-image: url('img/react.png');
+}
+
+.about-skill.node {
+  background-image: url('img/node.png');
+}
+
+.about-skill.rails {
+  background-image: url('img/rails.png');
 }
 
 .about-content .about-item .line-dec {
