@@ -226,22 +226,29 @@ h4, .h4 {
   margin: 30px 0px;
 }
 
-.about-content .service-item {
+.about-content .about-item {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 25px 30px;
   text-align: center;
   color: #fff;
   margin-bottom: 30px;
+
+  height: 100%;
 }
 
-.about-content .service-item .line-dec {
-  width: 45px;
-  height: 3px;
+.about-content .about-item .line-dec {
+  width: 50%;
+  height: 2px;
   background-color: #ff7d27;
   margin: 20px auto 15px auto;
 }
 
-
+.about-content .col-md-6 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  
+  box-sizing: border-box;
+}
 
 .projects-content {
   padding-top: 20vh;
@@ -523,7 +530,7 @@ footer em {
     text-align: left;
   }
 
-  .about-content .service-item {
+  .about-content .about-item {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 25px 30px;
     text-align: center;
