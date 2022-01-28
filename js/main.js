@@ -63,15 +63,17 @@ jQuery(document).ready(function($) {
 
 function displayIntroNouns(el) {
   const typingInterval = 150;
-  const nouns = ['Software Engineer', 'Artist', 'Dog Dad'];
+  const nouns = [' Software Engineer', 'n Artist', ' Dog Dad'];
   let currIdx = 0;
 
   setInterval(() => {
-    deleteWord(el);
-    setTimeout(() => {
-      currIdx = (currIdx + 1) % nouns.length;
-      typeWord(el, nouns[currIdx]);
-    }, typingInterval * el.innerText.length);
+    if (document.hasFocus()) {
+      deleteWord(el);
+      setTimeout(() => {
+        currIdx = (currIdx + 1) % nouns.length;
+        typeWord(el, nouns[currIdx]);
+      }, typingInterval * el.innerText.length);
+    }
   }, 6000);
 }
 
@@ -79,20 +81,22 @@ function deleteWord(el) {
   const intervalId = setInterval(() => {
     const innerText = el.innerText;
 
-    if (innerText.length === 0)
+    if (innerText.length === 1) {
       clearInterval(intervalId);
-
-    el.innerText = innerText.slice(0, innerText.length - 1);
+    } else {
+      el.innerText = innerText.slice(0, innerText.length - 1);
+    }
   }, 150)
 }
 
 function typeWord(el, word) {
+  const newWord = el.innerText + word;
   let letterIdx = 1;
 
   const intervalId = setInterval(() => {
-    if (letterIdx - 1 === word.length)
+    if (letterIdx - 1 === newWord.length)
       clearInterval(intervalId);
 
-    el.innerHTML = word.slice(0, letterIdx++);
+    el.innerText = newWord.slice(0, letterIdx++);
   }, 150)
 }
