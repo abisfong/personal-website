@@ -247,53 +247,6 @@ h4, .h4 {
   height: calc(100% - 51px);
 }
 
-.about-content .about-item .about-skill {
-  background-color: transparent;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: 12px solid transparent;
-
-  box-sizing: border-box;
-  height: 100%;
-}
-
-.about-skill.c-plus-plus {
-  background-image: url('/img/c-plus-plus.png');
-}
-
-.about-skill.java {
-  background-image: url('/img/java.png');
-}
-
-.about-skill.js {
-  background-image: url('/img/js.png');
-}
-
-.about-skill.html-5 {
-  background-image: url('/img/html-5.png');
-}
-
-.about-skill.css {
-  background-image: url('/img/css.png');
-}
-
-.about-skill.ruby {
-  background-image: url('/img/ruby.png');
-}
-
-.about-skill.react {
-  background-image: url('img/react.png');
-}
-
-.about-skill.node {
-  background-image: url('img/node.png');
-}
-
-.about-skill.rails {
-  background-image: url('img/rails.png');
-}
-
 .about-content .about-item .line-dec {
   width: 50%;
   height: 2px;
@@ -353,15 +306,79 @@ h4, .h4 {
 }
 
 
-.tabs-content {
+.skills-content {
+  background-image: url(../img/4th-section.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 8vh;
-  background-image: url(../img/4th-section.jpg);
-  background-attachment: fixed;
+
   min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
+}
+
+.skills-content h1 {
+  color: white;
+  font-size: 64px;
+
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.skills-content .container, .row {
+  overflow-y: scroll;
+  
+  max-height: 100%;
+}
+
+.skills-content .skill-item {
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 12px solid transparent;
+
+  box-sizing: border-box;
+  width: 50%;
+  padding-top: 50%;
+}
+
+.skill-item.c-plus-plus {
+  background-image: url('/img/c-plus-plus.png');
+}
+
+.skill-item.java {
+  background-image: url('/img/java.png');
+}
+
+.skill-item.js {
+  background-image: url('/img/js.png');
+}
+
+.skill-item.html-5 {
+  background-image: url('/img/html-5.png');
+}
+
+.skill-item.css {
+  background-image: url('/img/css.png');
+}
+
+.skill-item.ruby {
+  background-image: url('/img/ruby.png');
+}
+
+.skill-item.react {
+  background-image: url('img/react.png');
+}
+
+.skill-item.node {
+  background-image: url('img/node.png');
+}
+
+.skill-item.rails {
+  background-image: url('img/rails.png');
 }
 
 section {
