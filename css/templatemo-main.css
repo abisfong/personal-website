@@ -312,9 +312,7 @@ h4, .h4 {
   background-size: cover;
   background-position: center center;
   
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 8vh;
+  padding: 12vh 15px;
 
   min-height: 100vh;
 }
@@ -341,8 +339,8 @@ h4, .h4 {
   border: 12px solid transparent;
 
   box-sizing: border-box;
-  width: 50%;
-  padding-top: 50%;
+  width: 100%;
+  padding-top: 100%;
 }
 
 .skill-item.c-plus-plus {
@@ -370,15 +368,27 @@ h4, .h4 {
 }
 
 .skill-item.react {
-  background-image: url('img/react.png');
+  background-image: url('/img/react.png');
 }
 
 .skill-item.node {
-  background-image: url('img/node.png');
+  background-image: url('/img/node.png');
 }
 
 .skill-item.rails {
-  background-image: url('img/rails.png');
+  background-image: url('/img/rails.png');
+}
+
+.skill-item.database {
+  background-image: url('/img/database.png');
+}
+
+.skill-item.mongoose {
+  background-image: url('/img/mongoose.png');
+}
+
+.skill-item.git {
+  background-image: url('/img/git.png');
 }
 
 section {
