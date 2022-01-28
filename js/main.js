@@ -56,5 +56,43 @@ jQuery(document).ready(function($) {
         
     });
 
+    var introCarouselItem = $('#intro-carousel-item')[0];
 
+    displayIntroNouns(introCarouselItem);
 });
+
+function displayIntroNouns(el) {
+  const typingInterval = 150;
+  const nouns = ['Software Engineer', 'Artist', 'Dog Dad'];
+  let currIdx = 0;
+
+  setInterval(() => {
+    deleteWord(el);
+    setTimeout(() => {
+      currIdx = (currIdx + 1) % nouns.length;
+      typeWord(el, nouns[currIdx]);
+    }, typingInterval * el.innerText.length);
+  }, 6000);
+}
+
+function deleteWord(el) {
+  const intervalId = setInterval(() => {
+    const innerText = el.innerText;
+
+    if (innerText.length === 0)
+      clearInterval(intervalId);
+
+    el.innerText = innerText.slice(0, innerText.length - 1);
+  }, 150)
+}
+
+function typeWord(el, word) {
+  let letterIdx = 1;
+
+  const intervalId = setInterval(() => {
+    if (letterIdx - 1 === word.length)
+      clearInterval(intervalId);
+
+    el.innerHTML = word.slice(0, letterIdx++);
+  }, 150)
+}
