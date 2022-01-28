@@ -256,34 +256,50 @@ h4, .h4 {
 }
 
 .projects-content {
-  padding-top: 20vh;
+  padding: 20vh 0;
   background-image: url(../img/3rd-section.jpg);
 }
 
-.projects-content .item img {
+.projects-content .project-item a {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  display: block;
+  
+  padding-top: 100%;
   width: 100%;
 }
 
-.projects-content .item {
+.projects-content .project-item a.dino-bets {
+  background-image: url('/img/dino.gif');
+}
+
+.projects-content .project-item a.paimo {
+  background-image: url('/img/paimo.gif');
+}
+
+.projects-content .project-item {
   margin: 15px;
 }
 
-.projects-content .item .text-content {
+.projects-content .project-item .text-content {
   background-color: #fff;
   text-align: center;
   padding: 20px;
 }
 
-.projects-content .item .text-content h4 {
+.projects-content .project-item .text-content h4 {
   margin-top: 0px;
   font-size: 19px;
   font-weight: 600;
 }
 
-.projects-content .item .text-content span {
+.projects-content .project-item .text-content span {
   font-style: normal;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 300;
+  text-align: justify;
   color: #ff7d27;
 }
 
@@ -840,8 +856,4 @@ body.lb-disable-scrolling {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
-}
-
-#intro-carousel {
-
 }
