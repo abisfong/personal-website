@@ -143,13 +143,14 @@ a:hover { color: #FF0; }
 }
 
 
-.baner-content {
-  padding-top: 30vh;
+.banner-content {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
   text-align: center;
   background-image: url(../img/1st-section.jpg);
 }
 
-.baner-content h1 {
+.banner-content h1 {
   margin-top: 0px;
   font-size: 128px;
   color: #fff;
@@ -158,13 +159,13 @@ a:hover { color: #FF0; }
   margin-bottom: 0px;
 }
 
-.baner-content em {
+.banner-content em {
   color: #ff7d27;
   font-weight: 600;
   font-style: normal;
 }
 
-.baner-content span {
+.banner-content span {
   display: inline-block;
   margin-top: -20px;
   font-weight: 300;
@@ -172,7 +173,7 @@ a:hover { color: #FF0; }
   color: #fff;
 }
 
-.baner-content .primary-button {
+.banner-content .primary-button {
   margin-top: 15px;
 }
 
@@ -573,22 +574,23 @@ footer em {
 
 @media (max-width: 767px){
   
-  .baner-content {
-    padding-top: 30vh;
+  .banner-content {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
   }
 
-  .baner-content h1 {
+  .banner-content h1 {
     font-size: 64px;
   }
 
-  .baner-content em {
+  .banner-content em {
   }
 
-  .baner-content span {
+  .banner-content span {
     font-size: 24px;
   }
 
-  .baner-content .primary-button {
+  .banner-content .primary-button {
     margin-top: 15px;
   }
 
