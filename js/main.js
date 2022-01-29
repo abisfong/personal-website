@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
         
     });
 
-    var introCarouselItem = $('#intro-carousel-item')[0];
+    var introCarouselItem = document.getElementById('intro-item');
 
     displayIntroNouns(introCarouselItem);
 });
