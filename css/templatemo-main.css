@@ -201,11 +201,19 @@ a:hover { color: #FF0; }
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  text-align: center;
+  
   padding: 15vh 0;
   padding-left: 15px;
   padding-right: 15px;
 
   min-height: 100vh;
+}
+
+.about-content .left-text {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
 }
 
 .about-content .left-text h4 {
@@ -371,12 +379,17 @@ h4, .h4 {
 
   margin-top: 12px;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .skills-content .container, .row {
   overflow-y: scroll;
   
   max-height: 100%;
+}
+
+.skills-content .row > div {
+  padding: 0;
 }
 
 .skills-content .skill-item {
