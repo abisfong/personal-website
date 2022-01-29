@@ -153,7 +153,7 @@ a:hover { color: #FF0; }
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .banner-content h1 {
@@ -205,7 +205,7 @@ a:hover { color: #FF0; }
   padding-left: 15px;
   padding-right: 15px;
 
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 .about-content .left-text h4 {
