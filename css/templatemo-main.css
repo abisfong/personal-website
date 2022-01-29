@@ -340,10 +340,12 @@ h4, .h4 {
 
 
 .skills-content {
-  background-image: url(../img/4th-section.jpg);
+  background-image: 
+    linear-gradient(#00000088, #00000088),
+    url('/img/colored-pencils.jpg');
   background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
+  background-position: 0 0, center 70%;
   
   padding: 12vh 15px;
 
