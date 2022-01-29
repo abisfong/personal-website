@@ -148,6 +148,12 @@ a:hover { color: #FF0; }
   padding-bottom: 15vh;
   text-align: center;
   background-image: linear-gradient(#00000067, #00000067), url('/img/golden-gate-bridge.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  height: 100vh;
 }
 
 .banner-content h1 {
@@ -269,7 +275,9 @@ h4, .h4 {
 
 .projects-content {
   padding: 20vh 0;
-  background-image: url('/img/crafting.jpeg');
+  background-image: 
+    linear-gradient(#00000088, #00000088),
+    url('/img/crafting.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -347,9 +355,7 @@ h4, .h4 {
 
 
 .skills-content {
-  background-image: 
-    linear-gradient(#00000088, #00000088),
-    url('/img/colored-pencils.jpg');
+  background-image: linear-gradient(#333, #000);
   background-attachment: fixed;
   background-size: cover;
   background-position: 0 0, center 70%;
