@@ -177,34 +177,19 @@ a:hover { color: #FF0; }
   margin-top: 15px;
 }
 
-
+#intro-item {
+  margin-left: -15%;
+  margin-right: -15%;
+  text-align: center;
+}
 
 .about-content {
   background-attachment: fixed;
   background-image: 
-    url('/img/drawing-1.jpeg'),
-    url('/img/drawing-2.jpeg'),
-    url('/img/drawing-3.jpeg'),
-    url('/img/drawing-4.jpeg'),
-    url('/img/drawing-5.jpeg'),
-    url('/img/drawing-6.jpeg'),
-    url('/img/drawing-7.jpeg');
-  background-size: 
-    25%, 
-    25%, 
-    25%, 
-    25%, 
-    25%, 
-    25%, 
-    25%;
-  background-position: 
-    0 0,
-    0 75%,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%;
+    linear-gradient(#000000cc, #000000cc),
+    url('/img/drawings.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   padding: 15vh 0;
   padding-left: 15px;
@@ -619,7 +604,7 @@ footer em {
   font-style: normal;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   
   .banner-content {
     padding-top: 15vh;
@@ -635,6 +620,12 @@ footer em {
 
   .banner-content span {
     font-size: 24px;
+  }
+
+  #intro-item {
+    margin-left: -21%;
+    margin-right: -21%;
+    text-align: center;
   }
 
   .banner-content .primary-button {
@@ -665,6 +656,16 @@ footer em {
     margin-bottom: 30px;
   }
 
+}
+
+@media (max-width: 320px) {
+  #intro-item {
+    font-size: 44px;
+  }
+
+  .banner-content span {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1200px) {
