@@ -269,7 +269,10 @@ h4, .h4 {
 
 .projects-content {
   padding: 20vh 0;
-  background-image: url(../img/3rd-section.jpg);
+  background-image: url('/img/crafting.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .projects-content .project-item a {
