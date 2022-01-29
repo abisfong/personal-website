@@ -174,7 +174,11 @@ a:hover { color: #FF0; }
 }
 
 .banner-content .primary-button {
-  margin-top: 15px;
+  margin-top: 36px;
+}
+
+.banner-content .social-links {
+  margin-top: 24px;
 }
 
 #intro-item {
@@ -561,18 +565,18 @@ footer .primary-button {
   margin-bottom: 30px;
 }
 
-footer ul {
+.social-links {
   padding: 0px;
   margin: 0px;
   list-style: none;
 }
 
-footer ul li {
+.social-links li {
   display: inline-block;
   margin: 0px 4px;
 }
 
-footer ul li a {
+.social-links li a {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -586,7 +590,7 @@ footer ul li a {
   font-size: 17px;
 }
 
-footer ul li a:hover {
+.social-links li a:hover {
   color: #282b2f;
   background-color: #ff8e43;
 }
