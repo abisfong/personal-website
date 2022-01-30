@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
 });
 
 function displayIntroNouns(el) {
-  const typingInterval = 150;
+  const typingInterval = 75;
   const nouns = [' Software Engineer', 'n Artist', ' Dog Dad'];
   let currIdx = 0;
 
@@ -84,7 +84,7 @@ function deleteWord(el) {
     } else {
       el.innerText = innerText.slice(0, innerText.length - 1);
     }
-  }, 150)
+  }, 75)
 }
 
 function typeWord(el, word) {
