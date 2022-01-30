@@ -152,8 +152,9 @@ a:hover { color: #FF0; }
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
 
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .banner-content h1 {
