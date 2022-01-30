@@ -27,13 +27,14 @@ function addActionButtonSmoothScroll() {
 
   actionButtonEl.addEventListener('click', () => {
     const intervalId = setInterval(()=> {
-      if (elIsOnScreen(projectsSectionEl)) {
+      const projectsSectionY = projectsSectionEl.getBoundingClientRect().y;
+
+      if (projectsSectionY <= 0) {
         clearInterval(intervalId);
-        console.log(projectsSectionEl.getBoundingClientRect());
+      } else {
+        window.scroll({ top: window.scrollY + 30 })
       }
-      console.log('scrolling')
-      window.scroll({ top: window.scrollY - 10 })
-    }, 10);
+    }, 5);
   });
 }
 
