@@ -122,16 +122,20 @@ a:hover { color: #FF0; }
 
 
 .primary-button a {
-  display: inline-block;
   background-color: #ff7d27;
-  padding: 15px 24px;
   border-radius: 3px;
-  text-transform: uppercase;
-  font-size: 11px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   color: #fff;
+  display: inline-block;
+  font-size: 11px;
   font-weight: 700;
-  text-decoration: none;
   letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 15px 24px;
 }
 
 
@@ -154,6 +158,24 @@ a:hover { color: #FF0; }
   overflow: hidden;
 
   min-height: 100vh;
+}
+
+#headshot {  
+  margin: 12px auto;
+}
+
+#headshot > div{
+  background-image: url('/img/headshot.jpeg');
+  background-position: 44% 26%;
+  background-size: 175%;
+  border-radius: 50%;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  
+  padding-top: 100%;
+  
+  width: 100%;
 }
 
 .banner-content h1 {
@@ -626,6 +648,9 @@ footer .primary-button {
   text-decoration: none;
   transition: all 0.5s;
   font-size: 17px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 
 .social-links li a:hover {
