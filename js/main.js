@@ -9,15 +9,27 @@ https://templatemo.com/tm-526-vanilla
 jQuery(document).ready(function($) {
 	'use strict';
   addSideNavScrollspy();
+  addActionButtonSmoothScroll();
   loadOwlCarousel();
-  displayIntroNouns(introCarouselItem);
-
+  displayIntroNouns();
 });
 
 function addSideNavScrollspy() {
   $('body').scrollspy({ 
     target: '.fixed-side-navbar',
     offset: 200
+  });
+}
+
+function addActionButtonSmoothScroll() {
+  const actionButtonEl = document.getElementById('action-button');
+  const projectsSectionEl = document.getElementById('projects');
+
+  actionButtonEl.addEventListener('click', () => {
+    setInterval(()=> {
+      if (elIsOnScreen(projectsSectionEl))
+        return;
+    }, 100);
   });
 }
 
@@ -45,7 +57,7 @@ function displayIntroNouns() {
   let currIdx = 0;
 
   setInterval(() => {
-    if (document.hasFocus() && introNounsElIsOnScreen(introNounsEl)) {
+    if (document.hasFocus() && elIsOnScreen(introNounsEl)) {
       deleteWord(introNounsEl);
       setTimeout(() => {
         currIdx = (currIdx + 1) % nouns.length;
@@ -55,8 +67,8 @@ function displayIntroNouns() {
   }, 6000);
 }
 
-function introNounsElIsOnScreen(introNounsEl) {
-  const rect = introNounsEl.getBoundingClientRect();
+function elIsOnScreen(el) {
+  const rect = el.getBoundingClientRect();
 
   return -rect.y < rect.height;
 }
