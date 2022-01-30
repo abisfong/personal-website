@@ -286,6 +286,16 @@ h4, .h4 {
   margin: 20px auto 15px auto;
 }
 
+.about-content #action-button {
+  color: #ff7d27;
+  cursor: pointer;
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.about-content #action-button:hover {
+  color: #ff7d2788;
+}
+
 .projects-content {
   padding: 20vh 0;
   background-image: 
