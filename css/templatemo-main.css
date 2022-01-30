@@ -381,6 +381,7 @@ h4, .h4 {
 .skills-content h1 {
   color: white;
   font-size: 64px;
+  text-align: center;
 
   margin-top: 12px;
   margin-bottom: 32px;
