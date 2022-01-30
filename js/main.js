@@ -26,10 +26,14 @@ function addActionButtonSmoothScroll() {
   const projectsSectionEl = document.getElementById('projects');
 
   actionButtonEl.addEventListener('click', () => {
-    setInterval(()=> {
-      if (elIsOnScreen(projectsSectionEl))
-        return;
-    }, 100);
+    const intervalId = setInterval(()=> {
+      if (elIsOnScreen(projectsSectionEl)) {
+        clearInterval(intervalId);
+        console.log(projectsSectionEl.getBoundingClientRect());
+      }
+      console.log('scrolling')
+      window.scroll({ top: window.scrollY - 10 })
+    }, 10);
   });
 }
 
@@ -67,12 +71,6 @@ function displayIntroNouns() {
   }, 6000);
 }
 
-function elIsOnScreen(el) {
-  const rect = el.getBoundingClientRect();
-
-  return -rect.y < rect.height;
-}
-
 function deleteWord(el) {
   const intervalId = setInterval(() => {
     const innerText = el.innerText;
@@ -95,4 +93,10 @@ function typeWord(el, word) {
 
     el.innerText = newWord.slice(0, letterIdx++);
   }, 150)
+}
+
+function elIsOnScreen(el) {
+  const rect = el.getBoundingClientRect();
+
+  return rect.y >= 0 || rect.y + rect.height >= 0;
 }
