@@ -59,7 +59,7 @@ function displayIntroNouns(el) {
   let currIdx = 0;
 
   setInterval(() => {
-    if (document.hasFocus()) {
+    if (document.hasFocus() && elIsOnScreen(el)) {
       deleteWord(el);
       setTimeout(() => {
         currIdx = (currIdx + 1) % nouns.length;
@@ -67,6 +67,12 @@ function displayIntroNouns(el) {
       }, typingInterval * el.innerText.length);
     }
   }, 6000);
+}
+
+function elIsOnScreen(el) {
+  const elRect = el.getBoundingClientRect();
+
+  return -elRect.y < elRect.height;
 }
 
 function deleteWord(el) {

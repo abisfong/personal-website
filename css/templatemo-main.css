@@ -154,7 +154,7 @@ a:hover { color: #FF0; }
   background-attachment: fixed;
   overflow: hidden;
 
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .banner-content h1 {
