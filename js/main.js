@@ -7,72 +7,58 @@ https://templatemo.com/tm-526-vanilla
 */
 
 jQuery(document).ready(function($) {
-
 	'use strict';
+  addSideNavScrollspy();
+  loadOwlCarousel();
+  displayIntroNouns(introCarouselItem);
 
-
-    $('body').scrollspy({ 
-        target: '.fixed-side-navbar',
-        offset: 200
-    });
-      
-      // smoothscroll on sidenav click
-
-    $('.tabgroup > div').hide();
-        $('.tabgroup > div:first-of-type').show();
-        $('.tabs a').click(function(e){
-          e.preventDefault();
-            var $this = $(this),
-            tabgroup = '#'+$this.parents('.tabs').data('tabgroup'),
-            others = $this.closest('li').siblings().children('a'),
-            target = $this.attr('href');
-        others.removeClass('active');
-        $this.addClass('active');
-        $(tabgroup).children('div').hide();
-        $(target).show();
-      
-    })
-
-    var owl = $("#owl-testimonials");
-
-      owl.owlCarousel({
-        
-        pagination : true,
-        paginationNumbers: false,
-        autoPlay: 6000, //Set AutoPlay to 3 seconds
-        items : 3, //10 items above 1000px browser width
-        itemsDesktop : [1000,3], //5 items between 1000px and 901px
-        itemsDesktopSmall : [900,2], // betweem 900px and 601px
-        itemsTablet: [600,1], //2 items between 600 and 0
-        itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-        
-    });
-
-    var introCarouselItem = document.getElementById('intro-item');
-
-    displayIntroNouns(introCarouselItem);
 });
 
-function displayIntroNouns(el) {
+function addSideNavScrollspy() {
+  $('body').scrollspy({ 
+    target: '.fixed-side-navbar',
+    offset: 200
+  });
+}
+
+function loadOwlCarousel() {
+  var owl = $("#owl-testimonials");
+
+  owl.owlCarousel({
+    
+    pagination : true,
+    paginationNumbers: false,
+    autoPlay: 6000, //Set AutoPlay to 3 seconds
+    items : 3, //10 items above 1000px browser width
+    itemsDesktop : [1000,3], //5 items between 1000px and 901px
+    itemsDesktopSmall : [900,2], // betweem 900px and 601px
+    itemsTablet: [600,1], //2 items between 600 and 0
+    itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+      
+  });
+}
+
+function displayIntroNouns() {
+  const introNounsEl = document.getElementById('intro-nouns');
   const typingInterval = 75;
   const nouns = [' Software Engineer', 'n Artist', ' Dog Dad'];
   let currIdx = 0;
 
   setInterval(() => {
-    if (document.hasFocus() && elIsOnScreen(el)) {
-      deleteWord(el);
+    if (document.hasFocus() && introNounsElIsOnScreen(introNounsEl)) {
+      deleteWord(introNounsEl);
       setTimeout(() => {
         currIdx = (currIdx + 1) % nouns.length;
-        typeWord(el, nouns[currIdx]);
-      }, typingInterval * el.innerText.length);
+        typeWord(introNounsEl, nouns[currIdx]);
+      }, typingInterval * introNounsEl.innerText.length);
     }
   }, 6000);
 }
 
-function elIsOnScreen(el) {
-  const elRect = el.getBoundingClientRect();
+function introNounsElIsOnScreen(introNounsEl) {
+  const rect = introNounsEl.getBoundingClientRect();
 
-  return -elRect.y < elRect.height;
+  return -rect.y < rect.height;
 }
 
 function deleteWord(el) {
