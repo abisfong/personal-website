@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
   addSideNavScrollspy();
   addActionButtonSmoothScroll();
   loadOwlCarousel();
-  // displayIntroNouns();
+  displayIntroNouns();
 });
 
 function addSideNavScrollspy() {
