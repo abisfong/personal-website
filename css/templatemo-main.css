@@ -138,6 +138,9 @@ a:hover { color: #FF0; }
   padding: 15px 24px;
 }
 
+.primary-button {
+  
+}
 
 .parallax-content {
   width: 100%;
@@ -156,8 +159,6 @@ a:hover { color: #FF0; }
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
-
-  min-height: 100vh;
 }
 
 #headshot {  

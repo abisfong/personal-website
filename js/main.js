@@ -63,6 +63,8 @@ function displayIntroNouns() {
 
   setInterval(() => {
     if (document.hasFocus() && elIsOnScreen(introNounsEl)) {
+      console.log('in interval');
+      
       deleteWord(introNounsEl);
       setTimeout(() => {
         currIdx = (currIdx + 1) % nouns.length;
