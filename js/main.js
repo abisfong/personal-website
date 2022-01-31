@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
   addSideNavScrollspy();
   addActionButtonSmoothScroll();
   loadOwlCarousel();
-  displayIntroNouns();
+  // displayIntroNouns();
 });
 
 function addSideNavScrollspy() {
@@ -63,8 +63,7 @@ function displayIntroNouns() {
 
   setInterval(() => {
     if (document.hasFocus() && elIsOnScreen(introNounsEl)) {
-      console.log('in interval');
-      
+
       deleteWord(introNounsEl);
       setTimeout(() => {
         currIdx = (currIdx + 1) % nouns.length;
