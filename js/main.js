@@ -23,19 +23,25 @@ function addSideNavScrollspy() {
 
 function addActionButtonSmoothScroll() {
   const actionButtonEl = document.getElementById('action-button');
-  const projectsSectionEl = document.getElementById('projects');
 
-  actionButtonEl.addEventListener('click', () => {
+  actionButtonEl.addEventListener('click', scrollDownTo('projects'));
+}
+
+function scrollDownTo(elId) {
+  const projectsSectionEl = document.getElementById(elId);
+
+  return () => {
     const intervalId = setInterval(()=> {
       const projectsSectionY = projectsSectionEl.getBoundingClientRect().y;
-
+  
       if (projectsSectionY <= 0) {
         clearInterval(intervalId);
       } else {
         window.scroll({ top: window.scrollY + 30 })
       }
     }, 5);
-  });
+  }
+
 }
 
 function loadOwlCarousel() {
