@@ -189,9 +189,10 @@ a:hover { color: #FF0; }
     0px 6px 10px 0px rgba(0, 0, 0, 0.14),
     0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   
-  padding-top: 100%;
+  margin: 0 auto;
+  padding-top: 50%;
   
-  width: 100%;
+  width: 50%;
 }
 
 .banner-content h1 {
