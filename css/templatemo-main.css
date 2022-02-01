@@ -20,6 +20,15 @@ body {
   font-size: 14px;
 }
 
+@supports (-webkit-overflow-scrolling: touch) {
+  body .banner-content,
+  body .about-content,
+  body .projects-content,
+  body .skills-content {
+    background-attachment: scroll;
+  }
+}
+
 a { color: #3CC; }
 
 a:hover { color: #FF0; }
