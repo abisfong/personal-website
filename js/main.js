@@ -19,7 +19,6 @@ function addSideNavScrolls() {
 
   fixedSideNavbarEl.addEventListener('click', e => {
     const tabEl = e.target;
-    console.log(tabEl);
 
     scrollTo(tabEl.innerText.toLowerCase() || tabEl.href.slice(1));
   })
