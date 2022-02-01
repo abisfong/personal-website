@@ -8,36 +8,41 @@ https://templatemo.com/tm-526-vanilla
 
 jQuery(document).ready(function($) {
 	'use strict';
-  addSideNavScrollspy();
-  addActionButtonSmoothScroll();
+  addSideNavScrolls();
+  addActionButtonScroll();
   loadOwlCarousel();
   displayIntroNouns();
 });
 
-function addSideNavScrollspy() {
-  $('body').scrollspy({ 
-    target: '.fixed-side-navbar',
-    offset: 200
-  });
+function addSideNavScrolls() {
+  const fixedSideNavbarEl = document.getElementById('fixed-side-navbar');
+
+  fixedSideNavbarEl.addEventListener('click', e => {
+    const tabEl = e.target;
+    console.log(tabEl);
+
+    scrollTo(tabEl.innerText.toLowerCase() || tabEl.href.slice(1));
+  })
 }
 
-function addActionButtonSmoothScroll() {
+function addActionButtonScroll() {
   const actionButtonEl = document.getElementById('action-button');
 
-  actionButtonEl.addEventListener('click', scrollDownTo('projects'));
+  actionButtonEl.addEventListener('click', scrollTo('projects'));
 }
 
-function scrollDownTo(elId) {
+function scrollTo(elId) {
   const projectsSectionEl = document.getElementById(elId);
 
   return () => {
     const intervalId = setInterval(()=> {
       const projectsSectionY = projectsSectionEl.getBoundingClientRect().y;
+      const dir = projectsSectionY < 0 ? -1 : 1
   
       if (projectsSectionY <= 0) {
         clearInterval(intervalId);
       } else {
-        window.scroll({ top: window.scrollY + 30 })
+        window.scroll({ top: window.scrollY + 30*dir })
       }
     }, 5);
   }
