@@ -189,7 +189,7 @@ a:hover { color: #FF0; }
   margin: 12px auto;
 }
 
-#headshot > div{
+#headshot > div {
   background-image: url('/img/headshot.jpeg');
   background-position: 44% 26%;
   background-size: 175%;
@@ -199,9 +199,33 @@ a:hover { color: #FF0; }
     0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   
   margin: 0 auto;
-  padding-top: 50%;
+  padding-top: 65%;
   
-  width: 50%;
+  width: 65%;
+}
+
+@media only screen and (min-width: 1199px) {
+  #headshot > div {
+    padding-top: 55%;
+
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #headshot > div {
+    padding-top: 65%;
+
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #headshot>div {
+    padding-top: 75%;
+
+    width: 75%;
+  }
 }
 
 .banner-content h1 {
