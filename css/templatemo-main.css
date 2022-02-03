@@ -5,6 +5,16 @@ Vanilla Template
 https://templatemo.com/tm-526-vanilla
 
 */
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 p {
   font-size: 15px;
   line-height: 25px;
@@ -376,6 +386,7 @@ h4, .h4 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
 }
 
 .projects-content .project-item {

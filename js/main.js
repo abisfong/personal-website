@@ -9,7 +9,7 @@ https://templatemo.com/tm-526-vanilla
 jQuery(document).ready(function($) {
 	'use strict';
   addSideNavScrolls();
-  addActionButtonScroll();
+  // addActionButtonScroll();
   loadOwlCarousel();
   displayIntroNouns();
 });
@@ -24,11 +24,11 @@ function addSideNavScrolls() {
   })
 }
 
-function addActionButtonScroll() {
-  const actionButtonEl = document.getElementById('action-button');
+// function addActionButtonScroll() {
+//   const actionButtonEl = document.getElementById('action-button');
 
-  actionButtonEl.addEventListener('click', scrollTo('projects'));
-}
+//   actionButtonEl.addEventListener('click', scrollTo('projects'));
+// }
 
 function scrollTo(elId) {
   const projectsSectionEl = document.getElementById(elId);
