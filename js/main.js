@@ -96,7 +96,7 @@ function deleteWord(el) {
 }
 
 function typeWord(el, word) {
-  const newWord = el.innerText + word;
+  const newWord = 'A' + word;
   let letterIdx = 1;
 
   const intervalId = setInterval(() => {
