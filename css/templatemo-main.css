@@ -244,6 +244,16 @@ a:hover { color: #FF0; }
 
 #contact i {
   color: white;
+
+  margin-right: 2px;
+}
+
+#phone-number, #email {
+  display: inline-block;
+}
+
+#phone-number {
+  margin-right: 8px;
 }
 
 .banner-content h1 {
