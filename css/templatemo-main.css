@@ -238,7 +238,8 @@ a:hover { color: #FF0; }
   }
 }
 
-#contact span {
+#contact span a,
+#contact span a:hover {
   color: #ff7d27;
 }
 
