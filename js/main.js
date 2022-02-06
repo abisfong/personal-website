@@ -8,10 +8,24 @@ https://templatemo.com/tm-526-vanilla
 
 jQuery(document).ready(function($) {
 	'use strict';
+  let intervalId = 0;
+  
   addSideNavScrolls();
-  // addActionButtonScroll();
   loadOwlCarousel();
-  displayIntroNouns();
+  
+  if (/*@cc_on!@*/false) { // check for Internet Explorer
+    intervalId = displayIntroNouns();
+    document.onfocusin = () => {
+      clearInterval(intervalId);
+      intervalId = displayIntroNouns();
+    };
+  } else {
+    intervalId = displayIntroNouns();
+    window.onfocus = () => {
+      clearInterval(intervalId);
+      intervalId = displayIntroNouns();
+    };
+  }
 });
 
 function addSideNavScrolls() {
@@ -23,12 +37,6 @@ function addSideNavScrolls() {
     scrollTo(tabEl.innerText.toLowerCase() || tabEl.href.slice(1));
   })
 }
-
-// function addActionButtonScroll() {
-//   const actionButtonEl = document.getElementById('action-button');
-
-//   actionButtonEl.addEventListener('click', scrollTo('projects'));
-// }
 
 function scrollTo(elId) {
   const projectsSectionEl = document.getElementById(elId);
@@ -71,7 +79,7 @@ function displayIntroNouns() {
   const nouns = [' Software Engineer', 'n Artist', ' Dog Dad'];
   let currIdx = 0;
 
-  setInterval(() => {
+  return setInterval(() => {
     if (document.hasFocus() && elIsOnScreen(introNounsEl)) {
 
       deleteWord(introNounsEl);
