@@ -19,12 +19,18 @@ jQuery(document).ready(function($) {
       clearInterval(intervalId);
       intervalId = displayIntroNouns();
     };
+    document.onfocusout = () => {
+      clearInterval(intervalId);
+    }
   } else {
     intervalId = displayIntroNouns();
     window.onfocus = () => {
       clearInterval(intervalId);
       intervalId = displayIntroNouns();
     };
+    window.onblur = () => {
+      clearInterval(intervalId);
+    }
   }
 });
 
@@ -80,7 +86,7 @@ function displayIntroNouns() {
   let currIdx = 0;
 
   return setInterval(() => {
-    if (document.hasFocus() && elIsOnScreen(introNounsEl)) {
+    if (elIsOnScreen(introNounsEl)) {
 
       deleteWord(introNounsEl);
       setTimeout(() => {
