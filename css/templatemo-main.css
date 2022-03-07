@@ -179,6 +179,7 @@ a:hover { color: #FF0; }
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .banner-content .container {
@@ -200,8 +201,8 @@ a:hover { color: #FF0; }
 }
 
 #headshot > div {
-  background-image: url('/img/headshot.jpeg');
-  background-position: 44% 26%;
+  background-image: url('/img/headshot.jpg');
+  background-position: 50% 0;
   background-size: 175%;
   border-radius: 50%;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
