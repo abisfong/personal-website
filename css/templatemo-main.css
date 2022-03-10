@@ -239,6 +239,17 @@ a:hover { color: #FF0; }
   }
 }
 
+#contact span a,
+#contact span a:hover {
+  color: #ff7d27;
+}
+
+#contact i {
+  color: white;
+
+  margin-right: 2px;
+}
+
 #phone-number, #email {
   display: inline-block;
 }
